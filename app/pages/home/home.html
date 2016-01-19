@@ -1,0 +1,26 @@
+<ion-navbar *navbar>
+    <ion-title>
+        Home
+    </ion-title>
+</ion-navbar>
+
+<ion-content padding>
+    <ion-list>
+        <ion-input floating-label>
+            <ion-label>Username</ion-label>
+            <input type="text" name="username" [(ngModel)]="data.username">
+        </ion-input>
+
+        <button round block (click)="submit()">Submit to server</button>
+    </ion-list>
+
+    <ion-card>
+        <ion-card-header>
+            Response
+        </ion-card-header>
+        
+        <ion-card-content>
+            <b>{{data.response}}</b>
+        </ion-card-content>
+    </ion-card>
+</ion-content>
